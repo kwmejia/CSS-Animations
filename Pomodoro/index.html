@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="media/icon-1.ico" type="image/x-icon">
+    <title>Pomodoro</title>
+  </head>
+  <body>
+    <a href="https://protecciondatos-lopd.com/empresas/tecnica-pomodoro/" target="_blank" class="cont-help">?</a>
+    <div class="cont-theme">
+      <form class="form" id="theme">
+        <label for="input">¿Qué tema estudiaras?</label>
+        <input type="text" id="input" />
+        <div class="buttons">
+          <button id="btnSend" >Enviar</button>
+          <button id="btnCancel">Cancelar</button>
+        </div>
+      </form>
+    </div>
+
+    <main>
+      <div class="container">
+        <div class="nums">
+          <span id="minutes">25</span>
+          <span id="separator">:</span>
+          <span id="second">00</span>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button id="start" >Comenzar</button>
+        <button id="restart" >Reiniciar</button>
+      </div>
+    </main>
+
+    <audio src="media/restart.mp3"></audio>
+    <script src="js/modal.js" ></script>
+    <script src="js/script.js" ></script>
+  </body>
+</html>

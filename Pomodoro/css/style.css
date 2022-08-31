@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    transition: 1s;
+    position: relative;
+}
+
+
+main {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container {
+    width: 100%;
+}
+
+.txtDescanso {
+    font-size: 1.5em;
+    color: rgb(2, 136, 31);
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    padding: 0 0 15px 0;
+    text-shadow: 1px 1px 2px #eee, -1px -1px 2px #eee;
+}
+
+main .container .nums {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 15px rgb(32, 32, 32), -1px -1px 15px rgb(32, 32, 32);
+}
+
+.buttons button {
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    margin: 0 10px 0 10px;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+}
+
+#separator {
+    margin: 0 15px 0 15px;
+}
+
+#second{
+    width: 70px;
+}
+.buttons button:nth-child(1) {
+    background: rgb(2, 136, 31);
+    transition: .5s;
+}
+
+.buttons button:nth-child(1):hover {
+    background: rgb(4, 170, 40);
+}
+
+.buttons button:nth-child(2) {
+    background: rgb(136, 11, 2);
+    transition: .5s;
+
+}
+
+.buttons button:nth-child(2):hover {
+    background: rgb(168, 13, 2);
+}
+
+
+/* 
+    THEME
+*/
+.cape{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(0,0 , 0, .5);
+    transition: .5s;
+}
+.cont-theme {
+    top: 50px;
+    background: #1d2b3a;
+    width: 400px;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 15px #031321;
+    animation: showModal 1s linear;
+    padding: 30px 0 30px 0;
+    transition: .5s;
+    z-index: 20;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form label {
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #eee;
+    margin: 10px 0 10px 0;
+    text-align: center;
+}
+
+.form #input {
+    margin: 5px 0px 20px 0;
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 0px 10px 0px 10px;
+    background: #1d2b3a;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    outline: none;
+
+    color: #eee;
+}
+
+.form #input:focus {
+    border: 1px solid #fff;
+}
+
+.alertError {
+    background: #eee;
+    border: 3px solid rgb(136, 11, 2);
+    color: rgb(136, 11, 2);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 400;
+    transform: .5;
+    margin-top: 20px;
+}
+
+.alertSucces {
+    background: #eee;
+    border: 3px solid rgb(2, 136, 31);
+    color: rgb(2, 136, 31);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 400;
+    transform: .5;
+    margin-top: 20px;
+}
+
+
+.alert {
+    top: 50px;
+    background: #1d2b3a;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 15px #031321;
+    animation: showModal 1s linear;
+    padding: 20px;
+    transition: .5s;
+    font-size: 1.2em;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cont-help{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 35px;
+    height: 35px;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    background: #031321;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #eee;
+    text-decoration: none;
+}
+
+@keyframes showModal {
+    0% {
+        top: -100px;
+    }
+
+}
+
+@keyframes hiddeModal {
+    100% {
+        top: -500px;
+        display: none;
+    }
+
+}
+
+@media (max-width:375px) {
+    .cont-theme {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .buttons button {
+        width: 100px;
+        height: 40px;
+
+    }
+
+    .alertError {
+        font-size: .8em;
+    }
+
+    .alertSucces {
+        font-size: .8em;
+    }
+
+    .alert{
+        font-size: .8em;
+    }
+
+
+}
