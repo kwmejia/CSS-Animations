@@ -1,0 +1,120 @@
+:root {
+  --color_dropdown: #424650;
+  --color_hover_dropdown: #414f74;
+  --color_shadow_dropdown: #005CA7;
+  --color_font_dropdown: #000;
+}
+
+
+ul, li {
+  list-style: none;
+}
+
+.dropdown_ {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0px 10px;
+}
+
+
+.dropdown_ .dropdown_container {
+  background: var(--color_dropdown);
+  padding: 8px 15px;
+  /* height: 50px; */
+  min-width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  transition: .5s all;
+  cursor: pointer;
+  position: relative;
+
+  background: linear-gradient(145deg, #d9dbe6, #b7b9c2);
+  box-shadow: inset 5px 5px 10px #adaeb7,
+    inset -5px -5px 10px #e9ecf7;
+}
+
+.dropdown_ .dropdown_container:hover {
+  background: linear-gradient(145deg, #d9dbe6, #b7b9c2);
+  box-shadow: 5px 5px 10px #adaeb7,
+    -5px -5px 10px #e9ecf7;
+}
+
+.dropdown_ .dropdown_container:hover .dropdown_items {
+  background: var(--color_hover_dropdown);
+}
+
+.dropdown_ .dropdown_title {
+  color: var(--color_font_dropdown);
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.dropdown_ .icon_drop {
+  color: var(--color_font_dropdown);
+}
+
+
+.dropdown_ .dropdown_items {
+  margin-top: 5px;
+  background: var(--color_dropdown);
+  min-width: 200px;
+  padding: 10px;
+  border-radius: 6px;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 43px;
+  left: 0;
+  opacity: 1;
+  transition: 1s all;
+  animation: animatedDropdown .1s linear;
+
+  background: linear-gradient(145deg, #d9dbe6, #b7b9c2);
+  box-shadow: 5px 5px 10px #adaeb7,
+    -5px -5px 10px #e9ecf7;
+
+}
+
+
+.dropdown_ .dropdown_items a {
+  width: 100%;
+  color: var(--color_font_dropdown);
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 7px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+
+}
+
+
+.dropdown_ .dropdown_items a:hover {
+  background: var(--color_hover_dropdown);
+  box-shadow: 2px 2px 5px var(--color_shadow_dropdown),
+    -2px -2px 5px var(--color_shadow_dropdown);
+
+  background: linear-gradient(145deg, #d9dbe6, #b7b9c2);
+  box-shadow: inset 5px 5px 10px #adaeb7,
+    inset -5px -5px 10px #e9ecf7;
+}
+
+.show {
+  display: flex !important;
+}
+
+
+@keyframes animatedDropdown {
+  0% {
+    left: 20px;
+
+  }
+}

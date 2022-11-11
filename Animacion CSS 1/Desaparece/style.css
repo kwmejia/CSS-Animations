@@ -17,19 +17,19 @@ body {
     position: relative;
     width: 300px;
     height: 300px;
-    
+
 }
 
-.loader2{
+.loader2 {
     position: relative;
     width: 300px;
     height: 300px;
     /* opacity: 0; */
     transition: 3s;
-    animation: quitar 3s ;
+    animation: quitar 3s;
 }
 
-.loader span, .loader2 span  {
+.loader span, .loader2 span {
     position: absolute;
     top: 0;
     left: 0;
@@ -38,14 +38,25 @@ body {
     transform: rotate(calc(36deg * var(--i)));
 }
 
-@keyframes quitar{
-    0%{ opacity: 50%; }
-    50%{ opacity: 25%;}
-    90%{ opacity: 0;}
-    100% { display: none;}
+@keyframes quitar {
+    0% {
+        opacity: 50%;
+    }
+
+    50% {
+        opacity: 25%;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        display: none;
+    }
 }
 
-.loader span::before , .loader2 span::before {
+.loader span::before, .loader2 span::before {
     content: '';
     position: absolute;
     top: 0;
@@ -84,7 +95,7 @@ body {
 }
 
 
-.loader:hover span::before , .loader2:hover span::before{
+.loader span::before, .loader2 span::before {
     box-shadow: 0 0 20px #00efff,
         -200px -200px 0 #00efff,
         -200px -200px 20px #00efff,
